@@ -1,14 +1,19 @@
-// Update this page (the content is just a fallback if you fail and example)
+import React from "react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 const Index = () => {
   return (
-    <div className="h-screen w-screen flex items-center justify-center">
-      {/* Update with components here - default to put new layout sections as separate components in the components folder, and import them here */}
-      <div>
-        <h1 className="text-3xl text-center">Your Blank Canvas</h1>
-        <p className="text-center">
-          Chat with the agent to start making edits.
-        </p>
+    <div className="h-screen w-screen flex flex-col items-center justify-center space-y-4">
+      <h1 className="text-3xl text-center">Inventory Management System</h1>
+      <p className="text-center">Manage your tools and shop inventory efficiently.</p>
+      <div className="space-x-4">
+        <Link to="/tools-on-trucks">
+          <Button variant="outline">Manage Tools on Trucks</Button>
+        </Link>
+        <Link to="/shop-inventory">
+          <Button variant="outline">Manage Shop Inventory</Button>
+        </Link>
       </div>
     </div>
   );
